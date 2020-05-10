@@ -4,21 +4,23 @@
   box-sizing: border-box;
 }
 body {
-  background: #1C8EF9 !important;
+  background: #9f21ff !important;
   min-height: 100vh;
   display: flex;
-  font-weight: 400;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: Verdana;
 }
 
 h1,h2,h3,h4,h5,h6,label,span {
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: Verdana;
 }
 
 body, html, .App, #root, .auth-wrapper {
   width: 100%;
   height: 100%;
+}
+
+.form-inline > * {
+  margin:5px 3px;
 }
 
 .navbar-light {
@@ -44,7 +46,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .auth-wrapper .form-control:focus {
-  border-color: #167bff;
+  border-color: #a34ce6;
   box-shadow: none;
 }
 
@@ -70,4 +72,40 @@ body, html, .App, #root, .auth-wrapper {
 
 .forgot-password a {
   color: #167bff;
+}
+
+
+
+@font-face {
+  font-family: Frutiger;
+  src: url('./fonts/Frutiger_bold.ttf');
+}
+
+@font-face {
+  font-family: Verdana;
+  src: url('./fonts/Verdana.ttf');
+}
+#logo {
+  font-size: 45px; 
+  font-family: Frutiger;
+}
+
+#logo:hover {
+  text-decoration: none;
+
+}
+a {
+  text-decoration: none;
+}
+
+#logo1 {
+  color: #7a7255;
+}
+
+#logo2 {
+  color: #661f8f;
+}
+
+#logo1, #logo2 {
+  font-family: Frutiger !important;
 }
