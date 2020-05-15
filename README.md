@@ -1,3 +1,65 @@
+# Backend
+
+### Installation
+Go to backend folder
+```cd backend```
+
+Install node modules: 
+```npm install```
+
+Add `.env` file in `backend` directory
+
+Run `node index.js`
+
+### Routes.
+
+All requests are sent in a JSON. Authenticated requests need to be signed with an authentication header, obtained in `user/login`
+
+#### User routes
+**POST user/signup** - create a new user. \
+Payload example: 
+
+```JSON
+{
+	"email": "ade",
+	"username": "ade",
+	"password": "ade",
+	"isTutor": true,
+	"description": "cool"
+}
+```
+
+
+**POST user/login** - login user. The respone contains the `JWT token`, used for signing following requests \
+Payload example: 
+
+```JSON
+{ 
+	"email":"ade",
+	"password": "ade"
+}
+```
+
+Answer example: 
+
+```JSON
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZWI0Njg4ZjFlZWZmYzE3YTI0ZjA5NTMiLCJpYXQiOjE1ODg4ODE2NjIyNTcsImV4cCI6MTU4ODg4ODg2Mi4yNTh9.7TXnx0bDUcb_g0boJTavTheyYVuHkORF8-OftL1eYWI",
+    "user": {
+        "_id": "5eb4688f1eeffc17a24f0953",
+        "username": "ade",
+        "email": "ade",
+        "isTutor": true,
+        "description": "cool",
+        "usernameLower": "ade",
+        "__v": 0
+    }
+}
+```
+
+
+
+#  Frontend
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  background: #9f21ff !important;
+  background: #fff !important;
   min-height: 100vh;
   display: flex;
   font-family: Verdana;
 }
 
-h1,h2,h3,h4,h5,h6,label,span {
+h1, h2, h3, h4, h5, h6, label, span {
   font-family: Verdana;
 }
 
@@ -24,8 +24,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .navbar-light {
-  background-color: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.25);
 }
 
 .auth-wrapper {
@@ -35,24 +34,25 @@ body, html, .App, #root, .auth-wrapper {
   text-align: left;
 }
 
+
 .auth-inner {
-  width: 450px;
+  color: white;
+  width: 30%;
   margin: auto;
-  background: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
   transition: all .3s;
 }
 
 .auth-wrapper .form-control:focus {
-  border-color: #a34ce6;
   box-shadow: none;
 }
 
-.auth-wrapper h3 {
+h2 {
   text-align: center;
   margin: 0;
+
   line-height: 1;
   padding-bottom: 20px;
 }
@@ -63,18 +63,12 @@ body, html, .App, #root, .auth-wrapper {
 
 .forgot-password,
 .forgot-password a {
-  text-align: right;
+  text-align: center;
   font-size: 13px;
   padding-top: 10px;
-  color: #7f7d7d;
+  color: #f2ecc2;
   margin: 0;
 }
-
-.forgot-password a {
-  color: #167bff;
-}
-
-
 
 @font-face {
   font-family: Frutiger;
@@ -88,9 +82,14 @@ body, html, .App, #root, .auth-wrapper {
 #logo {
   font-size: 45px; 
   font-family: Frutiger;
+  color: #fff;
 }
 
-#logo:hover {
+#logo span {
+  color: #fff;
+}
+
+#logo span:hover {
   text-decoration: none;
 
 }
@@ -98,14 +97,162 @@ a {
   text-decoration: none;
 }
 
-#logo1 {
-  color: #7a7255;
-}
-
-#logo2 {
-  color: #661f8f;
-}
 
 #logo1, #logo2 {
   font-family: Frutiger !important;
+}
+
+.btn-tutor {
+  background-color: transparent !important;
+  border-color: #ffffff !important;
+
+}
+
+.btn-tutor:hover {
+  background-color: rgb(139, 134, 57) !important;
+
+  border-color: #c0a7cf;
+}
+
+
+.navbar-tutor {
+  color: #f0ecd8;
+  font-weight: 500 !important;
+  z-index: 112 !important;
+  padding-left: 50px !important;
+  height: 7%;
+}
+
+.navbar-color {
+  background:rgba(102,0,102,1);
+}
+
+.navbar-transparent {
+  background-color: transparent !important;
+}
+.navbar-label {
+  margin-right: 30px;
+  margin-left: 0px;
+}
+
+a {
+  color: black;
+}
+
+input {
+  background-color: rgba(255,255,255,0.1);
+  border: none;
+  position: relative;
+}
+
+.sign {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+
+.bg {background: rgb(102,0,102);
+  background: linear-gradient(90deg, rgba(102,0,102,1) 0%, rgba(95,103,37,1) 56%, rgba(27,159,131,1) 100%);
+  height: 100%;
+  /* Center and scale the image nicely */
+  z-index: 1 !important
+
+}
+.radio-container {
+  display: inline;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid white  
+}
+
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 8px;
+  left: 8px;
+  
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+ 	top: 3px;
+	left: 3px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: white;
+}
+
+.intro-img {
+  background: url("../src/pictures/sign.jpg") no-repeat center;
+  background-size: cover;
+  height: 75%;
+  position: relative;
+  top: 0%;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.intro-img-bg {
+  background: rgba(34, 35, 58, 0.8);
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+}
+
+.intro-bg {
+  background-color: lightgray;
+  height: 100%;
+  width: 100%;
+  top: 7%;
+  position: relative;
+}
+
+
+.intro-img-bg h2{
+  text-align: center;
+  padding: 7% 0;
+  color: #deedee;
+  font-weight: 600;
+  text-shadow: 3px 13px 10px #252126;
+}
+
+.sign-up-button {
+  left: 25%;
+  position: relative;
+  height: 25%;
 }
