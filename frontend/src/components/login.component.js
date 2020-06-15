@@ -14,9 +14,9 @@ export default class Login extends Component {
 
         }
     }
-    setUser = user => {
-        useContext(AuthContext);
-    }
+    // setUser = user => {
+    //     useContext(AuthContext);
+    // }
     handleOnSubmit = async e => {
         e.preventDefault();
         const {
@@ -32,7 +32,7 @@ export default class Login extends Component {
         try {
             alert(data.email);
             const response = await axios.post('http://localhost:3000/user/login', data);
-            const {token, user} = response.data;
+            const { token, user } = response.data;
             console.log(token, user);
             localStorage.setItem("token", token);
             this.state.user = user;
@@ -61,7 +61,7 @@ export default class Login extends Component {
                             <input type="email" name="email" className="sign form-control rounded-0" placeholder="E-mail" onChange={this.handleOnChangeInput}/>
                             
                             <input type="password" name = "password" className="sign form-control rounded-0" placeholder="Password" onChange={this.handleOnChangeInput}/>
-                            <input type="submit" className="w-100 rounded-0 btn btn-primary btn-lg btn-tutor shadow"value="Log in"></input>
+                            <input type="submit" onClick={() => this.props.navbarHandler(0)} className="w-100 rounded-0 btn btn-primary btn-lg btn-tutor shadow"value="Log in" ></input>
                         <small className="forgot-password float-right">
 
                         <a href="#">Forgot password?</a> </small>

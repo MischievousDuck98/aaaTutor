@@ -79,7 +79,7 @@ export default class SignUp extends Component {
                                 </label>
 
                             </div>
-                            <input type="submit" className="rounded-0 w-100 btn btn-primary btn-lg btn-tutor shadow" value="Sign Up" ></input>
+                            <input type="submit" onClick={() => this.props.navbarHandler(0)} className="rounded-0 w-100 btn btn-primary btn-lg btn-tutor shadow" value="Sign Up" ></input>
                         </form>
                     </div>
                 </div>
