@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const { passport } = require('./middlewares/passport');
 const userRoutes = require('./routes/user');
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());

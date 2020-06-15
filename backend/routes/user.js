@@ -7,10 +7,10 @@ const User = require('../models/User');
 const { requireAuth } = require('../middlewares/passport');
 
 
-router.post('/', async (req, res, next) => {
+router.post('/register', async (req, res, next) => {
   try {
-    const newUser = _.pick(req.body, ['username', 'email', 'isTutor', 'description', 'password']);
-
+    console.log(req.body);
+    const newUser = _.pick(req.body, ['username', 'firstName', 'lastName', 'email', 'isTutor', 'password']);
     console.log(newUser);
     if (!newUser.email || !newUser.password || !newUser.username) {
       console.log('here');
@@ -57,6 +57,11 @@ router.delete('/:userId', async (req, res, next) => {
   } catch (error) {
     return next(error);
   }
+});
+
+router.get('/', async (req, res, next) => {
+  const users = await User.find({});
+  res.send(users);
 });
 
 

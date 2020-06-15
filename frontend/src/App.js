@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/login.component";
 import SignUp from "./components/signup.component";
 import Intro from "./components/intro.component";
+import TutorProfile from "./components/tutorProfile.component";
+import StudentProfile from "./components/studentProfile.component";
 import Logo from "./components/Logo";
 
 export default class App extends Component {
@@ -14,11 +16,12 @@ export default class App extends Component {
 
     this.state = {
       loggedInStatus: "NOT_LOGGED_IN", // TEACHER / STUDENT / NOT_LOGGED_IN
-      transparentNavbar: 1
+      transparentNavbar: 1,
+      user: ""
     }
-    this.navbarHandler = this.navbarHandler.bind(this)
+    // this.navbarHandler = this.navbarHandler.bind(this)
   }
-  navbarHandler(id) {
+  navbarHandler = id => {
     this.setState({transparentNavbar: id});
   }
   render() {
@@ -49,6 +52,9 @@ export default class App extends Component {
           </Route>
           <Route exact path='/sign-up'>
             <SignUp />
+          </Route>
+          <Route exact path='/profile'>
+            {this.state.user.isTutor ? <TutorProfile /> : <StudentProfile />}
           </Route>
         </Switch>
 

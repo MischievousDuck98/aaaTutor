@@ -6,6 +6,8 @@ const userSchema = new Schema({
   isTutor: Boolean,
   username: { type: String, unique: true },
   usernameLower: { type: String, unique: true, lowercase: true },
+  firstName: { type: String },
+  lastName: { type: String },
   email: { type: String, unique: true, lowercase: true },
   password: { type: String, select: false },
   description: { type: String }
